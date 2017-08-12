@@ -1,0 +1,1 @@
+memcached.exe -d runservice -m 512

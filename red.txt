@@ -1,0 +1,8 @@
+https://edx.readthedocs.io/projects/edx-developer-guide/en/latest/architecture.html edx doc
+https://www.youtube.com/watch?v=RjlNRITtBWQ memcehce
+http://www.fatalerrors.org/a/main-32-bit-servers-don-t-have-journaling-enabled-by-default.html
+https://www.youtube.com/watch?v=0U89YkYGV7E
+https://docs.mongodb.com/manual/core/storage-engines/
+
+mongod.exe --dbpath c:\data\db --journal  --storageEngine=mmapv1
+sc.exe create MongoDB binPath= "C:\Program Files\MongoDB\Server\3.2\bin\mongod.exe"
