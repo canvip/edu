@@ -5,6 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var db = require('mongoose');
+
+db.createConnection('mongodb://localhost:27017/canvip');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var t = require('./routes/t')

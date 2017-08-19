@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  h1 #{title2}
+
+  form(method="post", action="/newcustomer", name="asd" )
+    p
+      label(for="Name") Name <br/>
+      input#name(name="Name")
+    p
+      label(for="phone") phone <br/>
+      input#phone(name="phone")
+    p
+      label(for="address") address <br/>
+      input#address(name="address")
