@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/newcustomer',function(req, res, next) {
   customerCtrl.newcustomer(req,res)
-  
+
   
 });
 router.post('/creatcustomer',function(req, res, next) {
