@@ -1,0 +1,1 @@
+SET DEBUG=edu:* & npm start
