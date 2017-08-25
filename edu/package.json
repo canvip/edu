@@ -7,11 +7,24 @@
   },
   "dependencies": {
     "body-parser": "~1.17.1",
+    "connect-mongo": "^1.3.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
-    "ejs": "~2.5.6",
+    "ejs": "^2.5.7",
+    "ejs-mate": "^2.3.0",
     "express": "~4.15.2",
+    "express-session": "^1.15.5",
+    "mongoose": "^4.11.7",
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jscs": "^4.0.0",
+    "gulp-jshint": "^2.0.4",
+    "jscs": "^3.0.7",
+    "jshint": "^2.9.5",
+    "jshint-visual-studio": "^1.0.1",
+    "wiredep": "^4.0.0"
   }
 }

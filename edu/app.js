@@ -4,11 +4,23 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
+var mongoose = require('mongoose');
+//var mongoStore = require('connect-mongo')(session);
+
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+//Set up mongoose connection
+
+var mongoDB = 'mongodb://canvip:canvip@ds043200.mlab.com:43200/canvip';
+mongoose.connect(mongoDB, {useMongoClient: true,});
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,7 +33,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+//app.use(session({
+//  secret:'canvip',
+//  store:new mongoStore ({mongooseconnection:mongoose.connection})
+//}));
+//
 app.use('/', index);
 app.use('/users', users);
 
